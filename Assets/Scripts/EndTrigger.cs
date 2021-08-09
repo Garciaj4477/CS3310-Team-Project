@@ -7,8 +7,8 @@ public class EndTrigger : MonoBehaviour
 
     void OnTriggerEnter()
     {
-
+        FindObjectOfType<AudioManager>().Stop("Theme");
+        FindObjectOfType<AudioManager>().Play("PlayerWin");
         gameManager.CompleteLevel();
-
     }
 }
